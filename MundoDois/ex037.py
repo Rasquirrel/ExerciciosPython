@@ -17,6 +17,8 @@ cores = {'Roxa-N': '\033[1;35m',
          'Amarelo-N': '\033[1;33m',
          'Vermelho': '\033[31m',
          'Vermelho-N': '\033[1;31m',
+         'Branco-N': '\033[1;30m',
+         'Branco': '\033[30m',
          'Close': '\033[m'}
 
 # Cabeçalho
@@ -32,21 +34,23 @@ print('{}-='.format(cores['Roxa-N']) * 50, '\033[m')
 
 # Inicio
 
-num = int(input('Digite um número: '))
+num = int(input('{}Digite um número: '.format(cores['Azul-N'])))
 
-print('_-' * 50)
-print('Decida:\n'
-      '1 - Converter para binário\n'
-      '2 - Converter para octal\n'
-      '3 - Converter para hexadecimal')
-print('_-' * 50)
+print('{}_-'.format(cores['Branco-N']) * 50)
+print('{}Decida:\n'
+      '1 - Converter para {}binário\n'
+      '{}2 - Converter para {}octal\n'
+      '{}3 - Converter para {}hexadecimal'
+      ''.format(cores['Ciano-N'], cores['Vermelho-N'],
+                cores['Ciano-N'], cores['Roxa-N'], cores['Ciano-N'], cores['Amarelo-N']))
+print('{}_-'.format(cores['Branco-N']) * 50, '\033[m')
 
 decisao = int(input())
 if decisao == 1:
-    print('{}'.format(bin(num)))
+    print('{}{}'.format(cores['Vermelho-N'], bin(num)))
 elif decisao == 2:
-    print('{}'.format(oct(num)))
+    print('{}{}'.format(cores['Roxa-N'], oct(num)))
 elif decisao == 3:
-    print('{}'.format(hex(num)))
+    print('{}{}'.format(cores['Amarelo-N'], hex(num)))
 else:
     print('Opção Invalida :(')
