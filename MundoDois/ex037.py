@@ -47,10 +47,10 @@ print('{}_-'.format(cores['Branco-N']) * 50, '\033[m')
 
 decisao = int(input())
 if decisao == 1:
-    print('{}{}'.format(cores['Vermelho-N'], bin(num)))
+    print('{}{}'.format(cores['Vermelho-N'], bin(num)[2:]))
 elif decisao == 2:
-    print('{}{}'.format(cores['Roxa-N'], oct(num)))
+    print('{}{}'.format(cores['Roxa-N'], oct(num)[2:]))
 elif decisao == 3:
-    print('{}{}'.format(cores['Amarelo-N'], hex(num)))
+    print('{}{}'.format(cores['Amarelo-N'], hex(num)[2:]))
 else:
     print('Opção Invalida :(')
