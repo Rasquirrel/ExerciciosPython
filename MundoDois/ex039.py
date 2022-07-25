@@ -1,5 +1,5 @@
 # Progama desenvolvido por José Isac
-# Update 1.5, 25 de julho, 12:13
+# Update 2.0, 25 de julho, 12:31
 
 # Esta biblioteca será utilizada para sempre utilizar o ano atual como base de um cálculo
 from datetime import date 
@@ -35,25 +35,55 @@ print('{}-='.format(cores['Roxa-N']) * 50, '\033[m')
 print()
 
 # Início
+print('{}ANTENÇÃO! ESCOLHA SEU SEXO:'.format(cores['Vermelho-N']))
+decisao = int(input('DIGITE 1 PARA MASCULINO OU DIGITE 2 PARA FEMININO: '))
 
-ano_Nascimento = int(input('{}Digite o seu ano de nascimento: '.format(cores['Azul-N'])))
-ano_Atual = date.today().year
-idade = ano_Atual - ano_Nascimento
-tempo_Faltando = 18 - idade
-tempo_Passou = idade - 18
-ano_Alistamento = ano_Atual + tempo_Faltando
-ano_APassou = ano_Atual - tempo_Passou
+# Teste, se == 1 : Masculino, se == 2 : Feminino.
 
-# Testes
+if decisao == 1:
+    ano_Nascimento = int(input('{}Digite o seu ano de nascimento: '.format(cores['Azul-N'])))
+    ano_Atual = date.today().year
+    idade = ano_Atual - ano_Nascimento
+    tempo_Faltando = 18 - idade
+    tempo_Passou = idade - 18
+    ano_Alistamento = ano_Atual + tempo_Faltando
+    ano_APassou = ano_Atual - tempo_Passou
 
-if idade < 18:
-    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
-    print('{}Você ainda vai se alistar ao serviço militar daqui a {}{}{}2006 anos em {}.'
-    ''.format(cores['Verde-N'], cores['Vermelho-N'], tempo_Faltando, cores['Verde-N'], ano_Alistamento))
-elif idade > 18:
-    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
-    print('{}Já passou da hora de se alistar! ' 
-    'Você deveria ter se alistado a {}{} atrás em {}.'.format(cores['Vermelho-N'], tempo_Passou, cores['Vermelho-N'], ano_APassou ))
-elif idade == 18:
-    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
-    print('{}Já é hora de se alistar! Procure a Junta do Serviço Militar mais próxima.'.format(cores['Roxa-N']))
+    # Testes de idade
+
+    if idade < 18:
+        print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+        print('{}Você ainda vai se alistar ao serviço militar daqui a {}{}{} anos em {}.'
+        ''.format(cores['Verde-N'], cores['Vermelho-N'], tempo_Faltando, cores['Verde-N'], ano_Alistamento))
+    elif idade > 18:
+        print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+        print('{}Já passou da hora de se alistar! ' 
+        'Você deveria ter se alistado a {}{} anos atrás em {}.'.format(cores['Vermelho-N'], tempo_Passou, cores['Vermelho-N'], ano_APassou ))
+    elif idade == 18:
+        print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+        print('{}Já é hora de se alistar! Procure a Junta do Serviço Militar mais próxima.'.format(cores['Roxa-N']))
+
+# Caso você tenha escolhido o sexo feminino:
+       
+else:
+    opcao = int(input('{}O alistamento militar não é obigatorio para você'
+                      ' que é mulher mas se você deseja fazer o alistamento, digite 1: '.format(cores['Vermelho-N'])))
+    if opcao == 1:
+        ano_Nascimento = int(input('{}Digite o seu ano de nascimento: '.format(cores['Azul-N'])))
+        ano_Atual = date.today().year
+        idade = ano_Atual - ano_Nascimento
+        tempo_Faltando = 18 - idade
+        tempo_Passou = idade - 18
+        ano_Alistamento = ano_Atual + tempo_Faltando
+        ano_APassou = ano_Atual - tempo_Passou
+        if idade < 18:
+            print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+            print('{}Você ainda vai se alistar ao serviço militar daqui a {}{}{} anos em {}.'
+                  ''.format(cores['Verde-N'], cores['Vermelho-N'], tempo_Faltando, cores['Verde-N'], ano_Alistamento))
+        elif idade > 18:
+            print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+            print('{}Já passou da hora de se alistar! ' 
+                  'Você deveria ter se alistado a {}{} anos atrás em {}.'.format(cores['Vermelho-N'], tempo_Passou, cores['Vermelho-N'], ano_APassou ))
+        elif idade == 18:
+            print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+            print('{}Já é hora de se alistar! Procure a Junta do Serviço Militar mais próxima.'.format(cores['Roxa-N']))
