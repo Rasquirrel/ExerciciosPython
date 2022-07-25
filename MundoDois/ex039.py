@@ -1,5 +1,5 @@
 # Progama desenvolvido por José Isac
-# 25 de julho, 11:06
+# Update 1.5, 25 de julho, 12:13
 
 # Esta biblioteca será utilizada para sempre utilizar o ano atual como base de um cálculo
 from datetime import date 
@@ -38,17 +38,22 @@ print()
 
 ano_Nascimento = int(input('{}Digite o seu ano de nascimento: '.format(cores['Azul-N'])))
 ano_Atual = date.today().year
-teste_Um = ano_Atual - ano_Nascimento
-tempo_Faltando = 18 - teste_Um
-tempo_Passou = teste_Um - 18
+idade = ano_Atual - ano_Nascimento
+tempo_Faltando = 18 - idade
+tempo_Passou = idade - 18
+ano_Alistamento = ano_Atual + tempo_Faltando
+ano_APassou = ano_Atual - tempo_Passou
 
 # Testes
 
-if teste_Um < 18:
-    print('{}Você ainda vai se alistar ao serviço militar.'
-    ' Você ainda possui {}{}{} anos até la.'.format(cores['Verde-N'], cores['Vermelho-N'], tempo_Faltando, cores['Verde-N']))
-elif teste_Um > 18:
+if idade < 18:
+    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
+    print('{}Você ainda vai se alistar ao serviço militar daqui a {}{}{}2006 anos em {}.'
+    ''.format(cores['Verde-N'], cores['Vermelho-N'], tempo_Faltando, cores['Verde-N'], ano_Alistamento))
+elif idade > 18:
+    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
     print('{}Já passou da hora de se alistar! ' 
-    'O prazo passou em {}{}{} anos.'.format(cores['Vermelho-N'], cores['Amarelo-N'], tempo_Passou, cores['Vermelho-N']))
-elif teste_Um == 18:
+    'Você deveria ter se alistado a {}{} atrás em {}.'.format(cores['Vermelho-N'], tempo_Passou, cores['Vermelho-N'], ano_APassou ))
+elif idade == 18:
+    print('{}Você nasceu em {} e possui {} anos.'.format(cores['Azul-N'], ano_Nascimento, idade))
     print('{}Já é hora de se alistar! Procure a Junta do Serviço Militar mais próxima.'.format(cores['Roxa-N']))
