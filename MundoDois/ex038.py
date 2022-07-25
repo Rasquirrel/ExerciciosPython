@@ -19,26 +19,26 @@ cores = {'Roxa-N': '\033[1;35m',
          'Close': '\033[m'}
 
 # Cabeçalho
-print('-=' * 50)
-print('DESAFIO N°38')
-print('Escreva um progama que leia dois números inteiros e compare-os\n'
+print('{}-='.format(cores['Roxa-N']) * 50, '\033[m')
+print('{}DESAFIO N°38'.format(cores['Ciano-N']))
+print('{}Escreva um progama que leia dois números inteiros e compare-os\n'
       'mostrando na tela uma mensagem:\n'
       '- O primeiro valor é maior\n'
       '- O segundo valor é maior\n'
-      '- Não existe valor maior, os dois são iguais.')
-print('-=' * 50)
+      '- Não existe valor maior, os dois são iguais.'.format(cores['Amarelo-N']))
+print('{}-='.format(cores['Roxa-N']) * 50, '\033[m')
 print()
 
 # Inicio
 
-numeroUm = int(input('Digite um número: '))
+numeroUm = int(input('{}Digite um número: '.format(cores['Azul-N'])))
 numeroDois = int(input('Digite mais um número: '))
 
 # Testes
 
 if numeroUm > numeroDois:
-    print('O primeiro valor digitado({})é maior que o segundo({}).'.format(numeroUm, numeroDois))
+    print('{}O primeiro valor digitado({})é maior que o segundo({}).'.format(cores['Azul-N'], numeroUm, numeroDois))
 elif numeroDois > numeroUm:
     print('O segundo valor digitado({}) é maior que o primeiro({}).'.format(numeroDois, numeroUm))
 elif numeroUm == numeroDois:
-    print('Não existe valor maior, os dois são iguais!')
+    print('{}Não existe valor maior, os dois são iguais!'.format(cores['Vermelho-N']))
