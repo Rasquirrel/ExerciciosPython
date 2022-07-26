@@ -1,5 +1,6 @@
 # Progama desenvolvido por José Isac
-# 26 de julho, 11:02
+# 26 de julho, 11:29
+# Versão 1.0
 
 # Crie um programa que leia duas notas de um aluno e calcule sua média,
 # mostrando uma mensagem no final, de acordo com a média atingida
@@ -28,3 +29,12 @@ nota_Dois = float(input('DIGITE O VALOR DA SEGUNDA NOTA: '))
 # Calculo da média
 
 media = (nota_Um + nota_Dois) / 2
+
+# Testes
+
+if media >= 7:
+    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ APROVADO! PARABENS')
+elif 5 < media < 6.9:
+    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ DE RECUPERAÇÃO! BOA SORTE')
+elif media < 5:
+    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ REPROVADO! ATÉ A PRÓXIMA!')
