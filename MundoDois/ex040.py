@@ -24,7 +24,14 @@ Se a média delas for 7 ou superior, retornarei APROVADO.
 # Prompts
 
 nota_Um = float(input('DIGITE O VALOR DA PRIMEIRA NOTA: '))
+while nota_Um > 10 or nota_Um < 0:
+    print('POR FAVOR, INSIRA UM VALOR ENTRE 0 E 10.')
+    nota_Um = float(input('DIGITE O VALOR DA PRIMEIRA NOTA: '))
+
 nota_Dois = float(input('DIGITE O VALOR DA SEGUNDA NOTA: '))
+while nota_Dois > 10 or nota_Dois < 0:
+    print('POR FAVOR, INSIRA UM VALOR ENTRE 0 E 10.')
+    nota_Dois = float(input('DIGITE O VALOR DA SEGUNDA NOTA: '))
 
 # Calculo da média
 
@@ -33,8 +40,8 @@ media = (nota_Um + nota_Dois) / 2
 # Testes
 
 if media >= 7:
-    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ APROVADO! PARABENS')
+    print(f'SUA MÉDIA É {media:.1f} E VOCÊ ESTÁ APROVADO! PARABENS')
 elif 5 < media < 6.9:
-    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ DE RECUPERAÇÃO! BOA SORTE')
+    print(f'SUA MÉDIA É {media:.1f} E VOCÊ ESTÁ DE RECUPERAÇÃO! BOA SORTE')
 elif media < 5:
-    print(f'SUA MÉDIA É {media} E VOCÊ ESTÁ REPROVADO! ATÉ A PRÓXIMA!')
+    print(f'SUA MÉDIA É {media:.1f} E VOCÊ ESTÁ REPROVADO! ATÉ A PRÓXIMA!')
