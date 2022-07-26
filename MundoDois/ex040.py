@@ -19,3 +19,12 @@ Se a média delas for abaixo de 5, retornarei REPROVADO;
 Se a média delas for entre 5 e 6.9, retornarei RECUPERAÇÃO;
 Se a média delas for 7 ou superior, retornarei APROVADO.
 ''')
+
+# Prompts
+
+nota_Um = float(input('DIGITE O VALOR DA PRIMEIRA NOTA: '))
+nota_Dois = float(input('DIGITE O VALOR DA SEGUNDA NOTA: '))
+
+# Calculo da média
+
+media = (nota_Um + nota_Dois) / 2
