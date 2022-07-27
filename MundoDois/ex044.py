@@ -24,5 +24,13 @@ if decisao == 1:
     print(f'''O PRODUTO A SER COMPRADO CUSTA R${preco_Produto:,.2f} E O METODO
 DE PAGAMENTO É À VISTA DINHEIRO/CHEQUE.
 E POR ISSO VOCÊ RECEBE UM DESCONTO DE 10%.
-O NOVO PRECO A SER NECESSÁRIO É DE R${preco_Produto:,.2f} ''')
+O NOVO PRECO A SER NECESSÁRIO É DE R${preco_NovoPreco:,.2f} ''')
+    print('=' * 52)
+
+if decisao == 2:
+    preco_NovoPreco = preco_Produto - (0.05 * preco_Produto)
+    print(f'''O PRODUTO A SER COMPRADO CUSTA R${preco_Produto:,.2f} E O METODO
+DE PAGAMENTO É À VISTA NO CARTAO.
+E POR ISSO VOCÊ RECEBE UM DESCONTO DE 5%.
+O NOVO PRECO A SER NECESSÁRIO É DE R${preco_NovoPreco:,.2f} ''')
     print('=' * 52)
