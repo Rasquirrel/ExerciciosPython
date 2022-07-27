@@ -1,10 +1,6 @@
-# Exercício Python 44: 
-# Elabore um programa que calcule o valor a ser pago por um produto, 
-# considerando o seu preço normal e condição de pagamento:
-# à vista dinheiro/cheque = 10% de desconto
-# à vista no cartao = 5% de desconto
-# em até 2x no cartao = preço formal
-# em até 3x ou mais no cartao = 20% de juros
+# Progama desenvolvido por José Isac
+# 27 de julho, 10:12
+# v1.0
 
 print('=' * 20, ' LOJA ', '=' * 26)
 preco_Produto = float(input('DIGITE O PREÇO DO PRODUTO: \nR$'))
@@ -45,9 +41,8 @@ SERÁ PRECISO PAGAR 2x PARCELAS DE R${parcela:,.2f}''')
 
 elif decisao == 4:
     quant = int(input('DIGITE A QUANTIDADE DE PARCELAS:'))
-    parcela = preco_Produto / quant
-    juros = preco_Produto * 0.2 * quant
-    preco_NovoPreco = juros + preco_Produto
+    preco_NovoPreco = preco_Produto + (preco_Produto * 0.2)
+    parcela = preco_NovoPreco / quant
     print(f'''O PRODUTO A SER COMPRADO CUSTA R${preco_Produto:,.2f} E O METODO
 DE PAGAMENTO É 3x OU MAIS NO CARTAO.
 POR ISSO SERÁ PRECISO PAGAR {quant} PARCELAS DE R${parcela:,.2f}
