@@ -8,3 +8,7 @@ print('''Desenvola um aplicativo que ajude o usuário a descobrir se três retas
 formam um triângulo e após isso informe qual o tipo de triângulo.
 ''')
 print('-=' * 50)
+
+reta_A = float(input('Digite o valor da primeira reta: '))
+reta_B = float(input('Digite o valor da segunda reta: '))
+reta_C = float(input('Digite o valor da terceira reta: '))
