@@ -6,7 +6,7 @@
 # em até 2x no cartao = preço formal
 # em até 3x ou mais no cartao = 20% de juros
 
-print('=' * 10, 'LOJA', '=' * 10)
+print('=' * 20, 'LOJA', '=' * 26)
 preco_Produto = float(input('DIGITE O PREÇO DO PRODUTO: \nR$'))
 
 print('ESCOLHA A FORMA DE PAGAMENTO')
@@ -15,4 +15,14 @@ print('''[ 1 ] À VISTA DINHEIRO/CHEQUE
 [ 3 ] EM ATÉ 2x NO CARTAO
 [ 4 ] EM ATÉ 3x OU MAIS NO CARTAO
 ''')
+print('=' * 52)
 decisao = int(input())
+print('=' * 52)
+
+if decisao == 1:
+    preco_NovoPreco = preco_Produto - (0.1 * preco_Produto)
+    print(f'''O PRODUTO A SER COMPRADO CUSTA R${preco_Produto:,.2f} E O METODO
+DE PAGAMENTO É À VISTA DINHEIRO/CHEQUE.
+E POR ISSO VOCÊ RECEBE UM DESCONTO DE 10%.
+O NOVO PRECO A SER NECESSÁRIO É DE R${preco_Produto:,.2f} ''')
+    print('=' * 52)
