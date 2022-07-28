@@ -47,3 +47,32 @@ elif player_Option == 0 and comp_Option == 2:
 	print('Você: PEDRA')
 	print('Você ganhou! Até a próxima!')
 
+# Caso o jogador escolha tesoura
+
+if player_Option == 2 and comp_Option == 0:
+	print('Computador: PEDRA')
+	print('Você: TESOURA')
+	print('Você perdeu, até a próxima!')
+elif player_Option == 2 and comp_Option == 1:
+	print('Computador: TESOURA')
+	print('Você: TESOURA')
+	print('Empate! Até a próxima!')
+elif player_Option == 2 and comp_Option == 2:
+	print('Computador: PAPEL')
+	print('Você: TESOURA')
+	print('Você ganhou! Até a próxima!')
+
+# Caso o jogador escolha papel
+if player_Option == 1 and comp_Option == 0:
+	print('Computador: PEDRA')
+	print('Você: PAPEL')
+	print('Você ganhou! Até a próxima!')
+elif player_Option == 1 and comp_Option == 2:
+	print('Computador: TESOURA')
+	print('Você: PAPEL')
+	print('Você perdeu! Até a próxima!')
+elif player_Option == 1 and comp_Option == 1:
+	print('Computador: PAPEL')
+	print('Você: PAPEL')
+	print('Empate! Até a próxima!')
+
