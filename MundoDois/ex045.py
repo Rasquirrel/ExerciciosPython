@@ -38,4 +38,12 @@ if player_Option == 0 and comp_Option == 0:
 	print('Computador: PEDRA')
 	print('Você: PEDRA')
 	print('Empate! Até a próxima!')
+elif player_Option == 0 and comp_Option == 1:
+	print('Computador: PAPEL')
+	print('Você: PEDRA')
+	print('Você perdeu! Até a próxima!')
+elif player_Option == 0 and comp_Option == 2:
+	print('Computador: TESOURA')
+	print('Você: PEDRA')
+	print('Você ganhou! Até a próxima!')
 
