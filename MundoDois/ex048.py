@@ -6,9 +6,7 @@ que são multiplos de três e que se encontram entre 1 e 500
 # 29 de julho, 14:28
 
 print('Os números ímpares múltiplos de três entre 1 e 500 são:')
-for c in range(1, 501):
-    if (c % 3) == 1:
+for c in range(3, 499, 3):
+    if c % 2 == 1:
         print(c)
-    else:
-        continue
-    
+        
